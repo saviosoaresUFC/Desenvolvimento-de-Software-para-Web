@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Projetos - Engenheiro de Software</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container header-content">
+            <h1>Meus Projetos</h1>
+            <p class="subtitle">Uma seleção de trabalhos desenvolvidos</p>
+
+            <div class="theme-switcher-container">
+                <button id="themeButton" aria-label="Escolher Tema">
+                    <i class="fa-solid fa-lightbulb"></i>
+                </button>
+                <div id="themeModal" class="theme-modal hidden">
+                    <button data-theme="light" class="theme-option">
+                        <i class="fa-solid fa-sun"></i> Light
+                    </button>
+                    <button data-theme="dark" class="theme-option">
+                        <i class="fa-solid fa-moon"></i> Dark
+                    </button>
+                    <button data-theme="system" class="theme-option active">
+                        <i class="fa-solid fa-desktop"></i> System
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="projects-grid">
+
+            <article class="project-card">
+                <div class="card-icon"><i class="fa-solid fa-id-card"></i></div>
+                <h2>Portfólio Pessoal</h2>
+                <p>Uma apresentação profissional das minhas habilidades, experiências e projetos anteriores.</p>
+                <a href="./PortfolioPessoal/index.html" class="btn-view" target="_blank" rel="noopener noreferrer">Ver Projeto <i class="fa-solid fa-arrow-right"></i></a>
+            </article>
+
+            <article class="project-card">
+                <div class="card-icon"><i class="fa-solid fa-blog"></i></div>
+                <h2>Blog de Esportes</h2>
+                <p>Um blog dinâmico com notícias, análises e discussões sobre o mundo dos esportes.</p>
+                <a href="./Blog/blogsports.html" class="btn-view" target="_blank" rel="noopener noreferrer">Ver Projeto <i class="fa-solid fa-arrow-right"></i></a>
+            </article>
+
+            <article class="project-card">
+                 <div class="card-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                <h2>Site sobre a Colômbia</h2>
+                <p>Um site informativo e visual sobre as belezas, cultura e atrações da Colômbia.</p>
+                <a href="./Colombia/index.html" class="btn-view" target="_blank" rel="noopener noreferrer">Ver Projeto <i class="fa-solid fa-arrow-right"></i></a>
+            </article>
+
+            <article class="project-card">
+                 <div class="card-icon"><i class="fa-solid fa-clone"></i></div>
+                <h2>Réplica Web Site</h2>
+                <p>Um exercício de front-end recriando o layout e a funcionalidade de um site conhecido.</p>
+                <a href="./ReplicaWebSite/index.html" class="btn-view" target="_blank" rel="noopener noreferrer">Ver Projeto <i class="fa-solid fa-arrow-right"></i></a>
+            </article>
+
+            </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 - Sávio Soares - Engenheiro de Software.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

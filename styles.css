@@ -1,0 +1,322 @@
+/* --- Variáveis de Cor e Reset --- */
+:root {
+    --color-primary: #007bff;
+    --color-secondary: #6c757d;
+    --color-light-bg: #f8f9fa;
+    --color-light-card: #ffffff;
+    --color-light-text: #212529;
+    --color-light-border: #e9ecef;
+
+    --color-dark-bg: #121212;
+    --color-dark-card: #1e1e1e;
+    --color-dark-text: #e0e0e0;
+    --color-dark-border: #333333;
+
+    --font-heading: 'Titillium Web', sans-serif;
+    --font-body: 'Roboto', sans-serif;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- Estilos Gerais e Modo Claro --- */
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-light-bg);
+    color: var(--color-light-text);
+    line-height: 1.6;
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-primary);
+    transition: color var(--transition-speed) ease;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* --- Cabeçalho --- */
+.site-header {
+    background-color: var(--color-light-card);
+    padding: 40px 0;
+    text-align: center;
+    border-bottom: 1px solid var(--color-light-border);
+    margin-bottom: 40px;
+    position: relative; /* Para o theme switcher */
+    transition: background-color var(--transition-speed) ease, border-color var(--transition-speed) ease;
+}
+
+.site-header h1 {
+    font-family: var(--font-heading);
+    font-size: 2.8em;
+    margin-bottom: 10px;
+    color: var(--color-light-text);
+    transition: color var(--transition-speed) ease;
+}
+
+.site-header .subtitle {
+    font-size: 1.1em;
+    color: var(--color-secondary);
+    margin-bottom: 20px;
+    transition: color var(--transition-speed) ease;
+}
+
+/* --- Grid de Projetos --- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Grid Responsivo */
+    gap: 30px; /* Espaçamento entre os cards */
+    padding-bottom: 60px;
+}
+
+/* --- Card de Projeto --- */
+.project-card {
+    background-color: var(--color-light-card);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 30px;
+    text-align: center;
+    border: 1px solid var(--color-light-border);
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease, background-color var(--transition-speed) ease, border-color var(--transition-speed) ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.project-card .card-icon {
+    font-size: 3em;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+    transition: color var(--transition-speed) ease;
+}
+
+.project-card h2 {
+    font-family: var(--font-heading);
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: var(--color-light-text);
+    transition: color var(--transition-speed) ease;
+}
+
+.project-card p {
+    font-size: 0.95em;
+    color: var(--color-secondary);
+    margin-bottom: 25px;
+    flex-grow: 1; /* Faz o parágrafo crescer e empurrar o botão para baixo */
+    transition: color var(--transition-speed) ease;
+}
+
+.project-card .btn-view {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color var(--transition-speed) ease;
+    border: 1px solid var(--color-primary);
+}
+
+.project-card .btn-view:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    color: #fff;
+}
+
+.project-card .btn-view i {
+    margin-left: 8px;
+    transition: transform 0.2s ease;
+}
+.project-card .btn-view:hover i {
+   transform: translateX(4px);
+}
+
+/* --- Rodapé --- */
+.site-footer {
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 40px;
+    background-color: var(--color-light-card);
+    border-top: 1px solid var(--color-light-border);
+    color: var(--color-secondary);
+    font-size: 0.9em;
+    transition: background-color var(--transition-speed) ease, border-color var(--transition-speed) ease, color var(--transition-speed) ease;
+}
+
+/* --- Estilos do Modo Escuro --- */
+body.dark-mode {
+    background-color: var(--color-dark-bg);
+    color: var(--color-dark-text);
+}
+
+body.dark-mode .site-header,
+body.dark-mode .project-card,
+body.dark-mode .site-footer {
+    background-color: var(--color-dark-card);
+    border-color: var(--color-dark-border);
+}
+
+body.dark-mode .site-header h1,
+body.dark-mode .project-card h2 {
+    color: var(--color-dark-text);
+}
+
+body.dark-mode .site-header .subtitle,
+body.dark-mode .project-card p,
+body.dark-mode .site-footer {
+    color: #a0a0a0; /* Um cinza um pouco mais claro */
+}
+
+body.dark-mode a {
+    color: #4dabf7; /* Um azul mais vibrante para dark mode */
+}
+body.dark-mode a:hover {
+    color: #1c7ed6;
+}
+
+body.dark-mode .project-card {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+body.dark-mode .project-card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .project-card .card-icon {
+    color: #4dabf7;
+}
+
+body.dark-mode .project-card .btn-view {
+    background-color: #4dabf7;
+    border-color: #4dabf7;
+    color: var(--color-dark-bg);
+}
+
+body.dark-mode .project-card .btn-view:hover {
+    background-color: #1c7ed6;
+    border-color: #1c7ed6;
+    color: #fff;
+}
+
+/* --- Estilos do Seletor de Tema (Reutilizados) --- */
+.theme-switcher-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1010;
+}
+
+#themeButton {
+    background-color: #6c757d;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color var(--transition-speed) ease, transform 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+#themeButton:hover { transform: scale(1.1); }
+
+body.dark-mode #themeButton { background-color: #4dabf7; }
+
+.theme-modal {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: var(--color-light-card);
+    border: 1px solid var(--color-light-border);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease, background-color var(--transition-speed) ease, border-color var(--transition-speed) ease;
+}
+
+.theme-modal.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+}
+
+body.dark-mode .theme-modal {
+    background-color: var(--color-dark-card);
+    border-color: var(--color-dark-border);
+}
+
+.theme-option {
+    background: none;
+    border: none;
+    color: var(--color-light-text);
+    padding: 10px 15px;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.2s ease, color var(--transition-speed) ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95em;
+    width: 100%;
+}
+.theme-option i { width: 16px; text-align: center; }
+.theme-option:hover { background-color: #f0f0f0; }
+
+body.dark-mode .theme-option { color: var(--color-dark-text); }
+body.dark-mode .theme-option:hover { background-color: #333333; }
+
+.theme-option.active {
+    background-color: var(--color-primary);
+    color: white;
+    font-weight: bold;
+}
+body.dark-mode .theme-option.active {
+    background-color: #4dabf7;
+    color: var(--color-dark-bg);
+}
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+    .site-header h1 { font-size: 2.2em; }
+    .theme-switcher-container { top: 10px; right: 10px; }
+    #themeButton { width: 35px; height: 35px; font-size: 1em; }
+    .theme-modal { top: 45px; }
+}
+@media (max-width: 480px) {
+    .site-header h1 { font-size: 1.8em; }
+    .projects-grid { grid-template-columns: 1fr; } /* Empilha os cards */
+}
