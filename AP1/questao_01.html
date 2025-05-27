@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desenvolvimento de Software WEB</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #000000;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        main {
+            display: flex;
+            flex: 1;
+        }
+
+        aside {
+            flex: 0 0 30%;
+            background-color: #f2f2f2;
+            padding: 15px;
+            box-sizing: border-box;
+            border-right: 1px solid #ccc;
+        }
+
+        aside h2 {
+            margin-top: 0;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        aside nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        aside nav ul li {
+            margin-bottom: 10px;
+        }
+
+        aside nav ul li a {
+            text-decoration: none;
+            color: #73879c;
+        }
+
+         aside nav ul li a:hover {
+            text-decoration: underline;
+         }
+
+        article {
+            flex: 1;
+            padding: 15px;
+            box-sizing: border-box;
+            background-color: #ffffff;
+        }
+
+        article h1 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        article p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .image-placeholder {
+            width: 200px;
+            height: 150px;
+            background-color: #cccccc;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #555;
+            font-style: italic;
+        }
+
+        footer {
+            background-color: #b4b4b4; 
+            color: black;
+            text-align: center;
+            padding: 15px;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: #0022ff;
+            text-decoration: none;
+        }
+
+         footer a:hover {
+            text-decoration: underline;
+         }
+
+        /* Media Query para telas menores */
+        @media (max-width: 400px) {
+            main {
+                flex-direction: column;
+            }
+
+            aside {
+                flex-basis: auto; /* Reseta a base flexível */
+                border-right: none;
+                border-bottom: 1px solid #ccc;
+            }
+
+            article {
+                 flex-basis: auto; /* Reseta a base flexível */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Desenvolvimento de Software WEB</h1>
+    </header>
+
+    <main>
+        <aside>
+            <h2>[Menu Lateral]</h2>
+            <nav>
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                    <li><a href="#">Link 5</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <article>
+            <h1>Introdução ao HTML</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+
+            <div class="image-placeholder">
+                imagem.png
+            </div>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Suspendisse potenti. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+            </p>
+
+             <div class="image-placeholder">
+                imagem.png
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p><a href="mailto:fulanodetal@ufc.br">saviocarvalho@alu.ufc.br</a></p>
+        <p>2025.1</p>
+        <p>Todos os direitos reservados</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card de Notificação</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            margin: 25px;
+            height: 250vh;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        /* Estilos para o nosso card de notificação */
+        .cartao-notificacao {
+            /* Fica fixo na tela */
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 250px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            /* Sombra suave */
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            z-index: 999; /* Para ficar por cima de tudo */
+        }
+
+        /* Estilos para o botão de fechar */
+        .botao-fechar {
+            /* Botão para a direita */
+            align-self: flex-end;
+            cursor: pointer;
+            font-size: 1.4em;
+            color: #686767;
+            background: none;
+            border: none;
+            padding: 0 5px;
+            margin-bottom: 10px;
+        }
+
+        .botao-fechar:hover {
+            color: #000;
+        }
+
+        /* Estilos para o título e parágrafo do card */
+        .cartao-notificacao h3 {
+            margin: 0 0 8px 0;
+            color: #222;
+        }
+
+        .cartao-notificacao p {
+            margin: 0;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        /* Classe para esconder o card quando fechado */
+        .escondido {
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Sávio de Carvalho Soares</h1>
+    <p>Proin ullamcorper urna et felis. Vestibulum iaculis lacinia est. Proin dictum elementum velit. Fusce euismod consequat ante. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque sed dolor. Aliquam congue fermentum nisl. Mauris accumsan nulla vel diam. Sed in lacus ut enim adipiscing aliquet. Nulla venenatis. In pede mi, aliquet sit amet, euismod in, auctor ut, ligula. Aliquam dapibus tincidunt metus. Praesent justo dolor, lobortis quis, lobortis dignissim, pulvinar ac, lorem. Vestibulum sed ante. Donec sagittis euismod purus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis, neque. Aliquam faucibus, elit ut dictum aliquet, felis nisl adipiscing sapien, sed malesuada diam lacus eget erat. Cras mollis scelerisque nunc. Nullam arcu. Aliquam erat volutpat. Duis ac turpis.</p>
+    <p>Integer rutrum ante eu lacus. Vestibulum libero nisl, porta vel, scelerisque eget, malesuada at, neque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse sollicitudin velit sed leo. Ut pharetra augue nec augue. Nam elit agna, endrerit sit amet, tincidunt ac, viverra sed, nulla. Donec porta diam eu massa. Quisque diam lorem, interdum vitae, dapibus ac, scelerisque vitae, pede. Donec eget tellus non erat lacinia fermentum. Donec in velit vel ipsum auctor pulvinar.</p>
+    <p>Proin ullamcorper urna et felis. Vestibulum iaculis lacinia est. Proin dictum elementum velit. Fusce euismod consequat ante. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque sed dolor. Aliquam congue fermentum nisl. Mauris accumsan nulla vel diam. Sed in lacus ut enim adipiscing aliquet. Nulla venenatis. In pede mi, aliquet sit amet, euismod in, auctor ut, ligula. Aliquam dapibus tincidunt metus. Praesent justo dolor, lobortis quis, lobortis dignissim, pulvinar ac, lorem. Vestibulum sed ante. Donec sagittis euismod purus.</p>
+    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+    <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+
+    <div class="cartao-notificacao" id="meuCartao">
+        <button class="botao-fechar" id="fecharCartao" aria-label="Fechar notificação">X</button>
+        <h3>Novidade!</h3>
+        <p>Confira nossos novos produtos.</p>
+    </div>
+
+    <script>
+        const botaoFechar = document.getElementById('fecharCartao');
+        const cartao = document.getElementById('meuCartao');
+
+        // Adiciona um ouvinte para o evento de clique no botão
+        botaoFechar.addEventListener('click', function() {
+            // Quando o botão for clicado, adiciona a classe 'escondido' ao card
+            cartao.classList.add('escondido');
+        });
+    </script>
+
+</body>
+</html>

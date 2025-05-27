@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 03 - Pokémon Viewer</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px;
+            border-radius: 10px;
+        }
+
+        img {
+            width: 150px; 
+            height: 150px;
+            margin-bottom: 30px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        button {
+            padding: 12px 25px;
+            margin: 0 10px;
+            font-size: 1em;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            color: white;
+        }
+
+        #prevButton {
+            background-color: #f44336;
+        }
+
+        #prevButton:hover {
+            background-color: #d32f2f;
+        }
+
+         #nextButton {
+            background-color: #4CAF50;
+        }
+
+        #nextButton:hover {
+            background-color: #388E3C;
+        }
+
+        /* Desabilita o botão visualmente quando nos limites */
+        button:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+        #pokemonIdDisplay {
+            margin-top: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img id="pokemonImage" src="" alt="Pokemon">
+
+        <div>
+            <button id="prevButton">Voltar -1</button>
+            <button id="nextButton">Adiantar +1</button>
+        </div>
+
+        <div id="pokemonIdDisplay">ID: 1</div>
+    </div>
+
+    <script>
+        // Variável para guardar o ID atual do Pokémon
+        let currentPokemonId = 1;
+        const baseUrl = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/';
+
+        // Seleciona os elementos HTML pelo ID
+        const pokemonImage = document.getElementById('pokemonImage');
+        const prevButton = document.getElementById('prevButton');
+        const nextButton = document.getElementById('nextButton');
+        const pokemonIdDisplay = document.getElementById('pokemonIdDisplay'); // Seleciona o display do ID
+
+        // Função para atualizar a imagem e o ID na tela
+        function updatePokemon() {
+            const imageUrl = `${baseUrl}${currentPokemonId}.svg`;
+            // Atualiza o atributo 'src' da tag img
+            pokemonImage.src = imageUrl;
+            // Atualiza o texto que mostra o ID
+            pokemonIdDisplay.textContent = `ID: ${currentPokemonId}`;
+
+            // Atualiza o estado dos botões (habilitado/desabilitado)
+            // Se o ID for 1, desabilita o botão 'Voltar'
+            prevButton.disabled = currentPokemonId <= 1;
+            // Se o ID for 100, desabilita o botão 'Adiantar'
+            nextButton.disabled = currentPokemonId >= 100;
+        }
+
+        prevButton.addEventListener('click', () => {
+            // Verifica se o ID atual é maior que 1 (limite inferior)
+            if (currentPokemonId > 1) {
+                currentPokemonId--; // Diminui o ID
+                updatePokemon(); // Atualiza a imagem e o ID
+            }
+        });
+
+        // Adiciona o 'escutador' de evento para o botão 'Adiantar'
+        nextButton.addEventListener('click', () => {
+            // Verifica se o ID atual é menor que 100 (limite superior)
+            if (currentPokemonId < 100) {
+                currentPokemonId++; // Aumenta o ID
+                updatePokemon(); // Atualiza a imagem e o ID
+            }
+        });
+
+        // Chama a função 'updatePokemon' uma vez no início
+        // para carregar a primeira imagem (ID 1)
+        updatePokemon();
+
+    </script>
+
+</body>
+</html>

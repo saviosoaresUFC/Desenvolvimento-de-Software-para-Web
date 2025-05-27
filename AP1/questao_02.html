@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 02 - Tabela de Produtos</title>
+    <style>
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            /*Une as bordas das células*/
+            margin: 20px auto;
+            border: 1px solid #ccc;
+        }
+
+        /* Estilos para Células do Cabeçalho (th) e Células de Dados (td) */
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+            font-family: sans-serif;
+        }
+
+        /* Estilos Específicos do Cabeçalho (thead) */
+        thead th {
+            background-color: #f0f0f0;
+            font-weight: bold;
+            /* Texto em negrito */
+            color: #333;
+        }
+
+        /* Estilos para Linhas Pares do Corpo (tbody) - Zebra Striping */
+        tbody tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+
+        /* Estilo para Linhas Ímpares (apenas para garantir o fundo branco) */
+        tbody tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+
+        /* Muda o fundo ao passar o mouse */
+        tbody tr:hover {
+            background-color: #e0f7fa;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Nome do Produto</th>
+                <th>Categoria</th>
+                <th>Preço (R$)</th>
+                <th>Estoque</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>001</td>
+                <td>Tênis Nike</td>
+                <td>Vestimenta</td>
+                <td>499,90</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>002</td>
+                <td>Smartphone Z Pro</td>
+                <td>Celulares</td>
+                <td>2.999,00</td>
+                <td>42</td>
+            </tr>
+            <tr>
+                <td>003</td>
+                <td>Cadeira Ergonômica</td>
+                <td>Móveis</td>
+                <td>899,50</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>004</td>
+                <td>Teclado Mecânico RGB</td>
+                <td>Periféricos</td>
+                <td>349,99</td>
+                <td>78</td>
+            </tr>
+            <tr>
+                <td>005</td>
+                <td>Vestido Feminino Longo</td>
+                <td>Vestimenta</td>
+                <td>450,00</td>
+                <td>22</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
